@@ -1,0 +1,21 @@
+{
+
+  "manifest_version": 2,
+  "name": "Link Crash Signature to crashstop",
+  "version": "1.0",
+
+  "description": "Turn signature links in Socorro into a link to the Crash-Stop server",
+
+  "icons": {
+    "48": "icons/final201-ant-icon.svg",
+    "96": "icons/final201-ant-icon.svg"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://crash-stats.mozilla.com/signature/*"],
+      "js": ["crashsig.js"]
+    }
+  ]
+
+}
